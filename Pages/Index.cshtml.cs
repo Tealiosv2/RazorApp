@@ -18,8 +18,8 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-        ViewData["MyName"] = "John Doe";
-        Company = "Microsoft";
+        ViewData["MyName"] = "Wyman Ng";
+        Company = "A01295107";
     }
     
     public void OnPost(){

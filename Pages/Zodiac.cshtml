@@ -1,0 +1,23 @@
+﻿@page
+@model ZodiacModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+
+    <form method="post">
+
+        <label for="year">Year:</label></label>
+        <input type="number" id="year" name="year"/><br><br>
+        <input type="submit" value="Get Zodiac" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Clear</a>
+    </form>
+
+    <div>
+        <P>@Model.message</P>
+        <p>@Model.Zodiac </p>
+        
+    </div>
+    <img src=@Model.ZodiacImg>
+</div>
