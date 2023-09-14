@@ -8,19 +8,19 @@ public class ZodiacModel : PageModel
     public string Zodiac { get; set; }
     public string ZodiacImg { get; set; }
 
-    public string message { get; set; }
+    public string Message { get; set; }
 
     [BindProperty]
-    public int year { get; set; }
+    public int Year { get; set; }
 
     public void OnPost(Utils Models)
     {
-        if (year >= 1900 && year <= 2024){
-            Zodiac = Models.GetZodiac(year);
+        if (Year >= 1900 && Year <= 2024){
+            Zodiac = Models.GetZodiac(Year);
 
             ZodiacImg = "/images/" + Zodiac + ".png";
         }else{
-            message = "Please enter a year between 1900 and 2024";
+            Message = "Please enter a year between 1900 and 2024";
         }
 
         
