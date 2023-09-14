@@ -13,8 +13,6 @@ public class ZodiacModel : PageModel
     [BindProperty]
     public int year { get; set; }
 
-        private readonly ILogger<IndexModel> _logger;
-
     public void OnPost(Utils Models)
     {
         if (year >= 1900 && year <= 2024){
